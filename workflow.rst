@@ -834,6 +834,10 @@ order:
     then the ``workflow.[workflow_name].entered.[initial_place_name]`` event will
     be called with the default context (``Workflow::DEFAULT_INITIAL_CONTEXT``).
 
+.. note::
+
+    To prevent the event from being propagated to other listeners, call ``$event->stopPropagation()``.
+
 Here is an example of how to enable logging for every time a "blog_publishing"
 workflow leaves a place::
 
